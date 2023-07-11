@@ -46,7 +46,9 @@ const formerExecCards = FormerExecutiveCardInfo.map((memberData) => {
 
 const index = () => {
     return (
+        
         <div id="teams">
+            <section>Teams</section>
             <div className="ExecCardContainer">
                     <div className="ExecTitleBorderContainer">
                         <p className="blackHeader">Current Executives</p>

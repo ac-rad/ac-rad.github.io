@@ -7,11 +7,9 @@ import videoBg from '../../../assets/banner_video.mp4';
 
 //components
 import Header from './header-banner/index.js';
-import ProjInfo from './proj-info';
-import Missions from './missions';
+import Projects from './projects/index.js';
 import News from './news/index.js';
 import Papers from './papers';
-import Media from './media';
 import Teams from './teams/index.js';
 
 const Landing = () => {
@@ -53,12 +51,13 @@ const Landing = () => {
                         <p>Scroll Down</p>
                     </div>
                 </div>
-                <ProjInfo />
-                <Missions />
-                
+                <br/>
+                <Projects />
+                <div className="divider"></div>
                 <News />
+                <div className="divider"></div>
                 <Papers />
-                <Media />
+                <div className="divider"></div>
                 <Teams />
             </main>
         </>

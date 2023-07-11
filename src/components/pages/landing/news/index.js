@@ -1,31 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
-import Proj from './proj.js'
-import {projInfo} from './projInfo.js'
-
-
-const projCards = projInfo.map((projData) => {
-    return (
-        <Proj proj={{
-            image: [projData.image[0], projData.image[1]],
-            title: projData.title,
-            description: projData.description,
-            acceptedTo: projData.acceptedTo,
-            projectPage: projData.projectPage,
-            arxiv: projData.arxiv,
-            github: projData.github
-        }}/>
-    )});
-
-const index = () => {
+const News = () => {
     return (
         <>
-            <section id="news">News</section>
-            <nav className="grid sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4 justify-items-center w-full">
-                {projCards}
-            </nav>
+        <section id="news">News</section>
         </>
-    )};
+        )};
 
-export default index;
+export default News;

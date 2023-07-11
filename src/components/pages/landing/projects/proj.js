@@ -2,7 +2,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-import './proj.css'
+
 
 // card has attributes .className, .image, .name, .position,
 //   .discipline [is "discipline+year"],

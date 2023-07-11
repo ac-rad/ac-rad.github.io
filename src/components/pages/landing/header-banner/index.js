@@ -63,11 +63,6 @@ const Header = ({ navMaxHeight, headerRef }) => {
                             </Link>
                         </li>
                         <li>
-                            <Link to="missions" spy={true} smooth={true} offset={-1 * navMaxHeight - 50} duration={500} onClick={closeDropdown}>
-                                <span className="md:p-4 py-2 block hover:text-themeOrange">Missions</span>
-                            </Link>
-                        </li>
-                        <li>
                             <Link to="news" spy={true} smooth={true} offset={-1 * navMaxHeight - 50} duration={500} onClick={closeDropdown}>
                                 <span className="md:p-4 py-2 block hover:text-themeOrange">News</span>
                             </Link>
@@ -75,11 +70,6 @@ const Header = ({ navMaxHeight, headerRef }) => {
                         <li>
                             <Link to="papers" spy={true} smooth={true} offset={-1 * navMaxHeight - 50} duration={500} onClick={closeDropdown}>
                                 <span className="md:p-4 py-2 block hover:text-themeOrange">Papers</span>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="media" spy={true} smooth={true} offset={-1 * navMaxHeight - 50} duration={500} onClick={closeDropdown}>
-                                <span className="md:p-4 py-2 block hover:text-themeOrange">Media</span>
                             </Link>
                         </li>
                         <li>
