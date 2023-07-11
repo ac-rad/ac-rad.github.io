@@ -48,7 +48,7 @@ function SearchComponent() {
         const dateB = new Date(b.date.split('-').reverse().join('-'));
         return dateB - dateA;
       })
-      .slice(0, 5)
+      .slice(0, 6)
       .map((projData) => (
         <Proj
           key={projData.title}
