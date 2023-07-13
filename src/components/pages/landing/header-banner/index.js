@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link } from 'react-scroll';
-import logo from '../../../../assets/ac-rad.png';
 
 const Header = ({ navMaxHeight, headerRef }) => {
     const [showDropdown, setShowDropdown] = useState(false);
@@ -31,7 +30,7 @@ const Header = ({ navMaxHeight, headerRef }) => {
             >
                 <div id="logo" className="col-start-1">
                     <Link to="home" spy={true} smooth={true} offset={0} duration={500} onClick={closeDropdown}>
-                        <img src={logo} width="350" height="32.125"></img>
+                        <img src="https://avatars.githubusercontent.com/u/107219416?s=48&v=4" width="50" height="32.125"></img>
                     </Link>
                 </div>
                 <div className="col-start-2">
@@ -61,11 +60,6 @@ const Header = ({ navMaxHeight, headerRef }) => {
                         <li>
                             <Link to="projInfo" spy={true} smooth={true} offset={-1 * navMaxHeight - 50} duration={500} onClick={closeDropdown}>
                                 <span className="md:p-4 py-2 block hover:text-themeOrange">About</span>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="news" spy={true} smooth={true} offset={-1 * navMaxHeight - 50} duration={500} onClick={closeDropdown}>
-                                <span className="md:p-4 py-2 block hover:text-themeOrange">News</span>
                             </Link>
                         </li>
                         <li>

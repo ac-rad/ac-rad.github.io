@@ -1,64 +1,57 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React from 'react';
+
+//assets + dependencies
 import { Link } from 'react-scroll';
+import { useState, useRef, useEffect } from 'react';
 import videoBg from '../../../assets/banner_video.mp4';
-import './landing.css';
+
+//components
 import Header from './header-banner/index.js';
-import Papers from './papers/index.js';
-import News from './news/index.js';
+import Info from './info';
+import Papers from './Papers/index.js';
 import Teams from './teams/index.js';
 
 const Landing = () => {
-  const [click, setClick] = useState(false);
-  const handleClick = () => setClick(!click);
-  const closeMenu = () => setClick(false);
+    //for handling the click states for the display of the menu
+    const [click, setClick] = useState(false);
+    const handleClick = () => setClick(!click);
+    const closeMenu = () => setClick(false);
 
-  const headerRef = useRef(null);
-  const navMaxHeight = useState(0);
-  const [parallaxOffset, setParallaxOffset] = useState(0);
+    //for the handling of the max height
+    const headerRef = useRef(null);
+    const videoContentRef = useRef(null);
+    const [navMaxHeight, setNavMaxHeight] = useState(0);
+    const [videoMaxHeight, setVideoMaxHeight] = useState(0);
+    useEffect(() => {
+        const headerHeight = headerRef.current.clientHeight;
+        const videoContentHeight = videoContentRef.current.clientHeight;
 
-  useEffect(() => {
-    const updateParallax = () => {
-      setParallaxOffset(window.scrollY * 0.5);
-    };
-    window.addEventListener('scroll', updateParallax);
-    return () => {
-      window.removeEventListener('scroll', updateParallax);
-    };
-  }, []);
+        const calculatedNavMaxHeight = Math.min(10, headerHeight);
+        const calculatedVideoMaxHeight = Math.min(videoContentHeight - calculatedNavMaxHeight, videoContentHeight);
 
-  return (
-    <>
-      <main id="home" className="antialiased w-full min-h-screen">
-        <div id="progressBar"></div>
-        <Header navMaxHeight={navMaxHeight} headerRef={headerRef} />
-        <div
-          id="video"
-          className="relative -z-50 flex flex-col items-center justify-center"
-          style={{ transform: `translate3d(0, ${parallaxOffset}px, 0)` }}
-        >
-          <video src={videoBg} autoPlay loop muted className="w-full h-full object-cover" />
-          <div id="overlay" className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50"></div>
-          <div id="videoContent" className="absolute w-full h-full flex flex-col justify-center items-center text-neutral-100">
-            <hgroup>
-              <h1>Acceleration Consortium</h1>
-              <p>---</p>
-              <h1>Robotics Assisted Accelerated Discovery</h1>
-            </hgroup>
-            <svg className="arrows">
-              <path className="a1" d="M0 0 L22.5 24 L45 0"></path>
-              <path className="a2" d="M0 15 L22.5 39 L45 15"></path>
-              <path className="a3" d="M0 30 L22.5 54 L45 30"></path>
-            </svg>
-          </div>
-        </div>
-        <br/>
-        <div className="content">
-          <Papers />
-         
-        </div>
-      </main>
-    </>
-  );
+        setNavMaxHeight(calculatedNavMaxHeight);
+        setVideoMaxHeight(calculatedVideoMaxHeight);
+    }, []);
+
+    return (
+        <>
+            <main id="home" className="antialiased w-full min-h-screen">
+                <Header navMaxHeight={navMaxHeight} headerRef={headerRef} />
+                <div id="video" className="relative -z-25 flex flex-col items-center justify-center">
+                    <video src={videoBg} autoPlay loop muted className="w-full h-full object-cover" />
+                    <div id="overlay" className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50"></div>
+                    <div ref={videoContentRef} id="videoContent" className="absolute w-full h-full flex flex-col justify-center items-center text-neutral-100">
+                        <h1 className="text-2xl">Material and Chemical Sciences Meet Robotics and AI</h1>
+                        <p>Learn More</p>
+                    </div>
+                </div>
+
+                <Info />
+                <Papers />
+                <Teams />
+            </main>
+        </>
+    );
 };
 
 export default Landing;

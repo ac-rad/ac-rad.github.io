@@ -13,6 +13,7 @@ const currentExecCards = CurrentExecInfo.map((memberData) => {
                 name: memberData.name,
                 position: memberData.position,
                 discipline: memberData.discipline,
+                className: 'text-white',
             }}
         />
     );
@@ -26,6 +27,7 @@ const memberCards = MemberCardInfo.map((memberData) => {
                 name: memberData.name,
                 position: memberData.position,
                 discipline: memberData.discipline,
+                className: 'text-white',
             }}
         />
     );
@@ -39,6 +41,7 @@ const formerExecCards = FormerExecutiveCardInfo.map((memberData) => {
                 name: memberData.name,
                 position: memberData.position,
                 discipline: memberData.discipline,
+                className: 'text-white',
             }}
         />
     );
@@ -46,30 +49,28 @@ const formerExecCards = FormerExecutiveCardInfo.map((memberData) => {
 
 const index = () => {
     return (
-        
-        <div id="teams">
-            <section>Teams</section>
-            <div className="ExecCardContainer">
-                    <div className="ExecTitleBorderContainer">
-                        <p className="blackHeader">Current Executives</p>
-                    </div>
-                <div className="CardGridContainer">
+        <div id="teams" className="bg-themeNavy">
+            <div className="ExecCardContainer bg-inherit">
+                <div className="ExecTitleBorderContainer bg-inherit">
+                    <p className="blackHeader text-white">Current Executives</p>
+                </div>
+                <div className="CardGridContainer bg-inherit">
                     <CardGrid cards={currentExecCards} />
                 </div>
             </div>
-            <div className="GeneralCardContainer">
-                <div className="GeneralMemberBorderContainer">
-                    <p className="BlackHeader">Current Members</p>
+            <div className="GeneralCardContainer bg-inherit">
+                <div className="GeneralMemberBorderContainer bg-inherit">
+                    <p className="BlackHeader text-white">Current Members</p>
                 </div>
-                <div className="CardGridContainer">
+                <div className="CardGridContainer bg-inherit">
                     <CardGrid cards={memberCards} />
                 </div>
             </div>
-            <div className="FormerCardContainer">
-                <div className="FormerExecBorderContainer">
-                    <p className="WhiteHeader">Former Executives</p>
+            <div className="FormerCardContainer bg-inherit">
+                <div className="FormerExecBorderContainer bg-inherit">
+                    <p className="WhiteHeader text-white">Former Executives</p>
                 </div>
-                <div className="CardGridContainer">
+                <div className="CardGridContainer bg-inherit">
                     <CardGrid cards={formerExecCards} />
                 </div>
             </div>
