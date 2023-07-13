@@ -29,7 +29,9 @@ const Proj = ({proj}) => {
   return <>
 
     <div className="card card-compact w-96 bg-base-300 shadow-xl">
+      <div className="projCardImgContainer">
         <img className="projCardImg" src={imageSrc} alt={proj.image[1]} />
+      </div>
         <div className="card-body">
             <h2 className="card-title">{proj.title}</h2>
             <p>{proj.description}</p>
@@ -42,9 +44,9 @@ const Proj = ({proj}) => {
             )}
             
             <div className="card-actions justify-end" style={{marginTop: 1 + 'em'}}>
-                {proj.projectPage.length > 0 ? <button className="btn btn-primary"> <Link href={proj.projectPage}>Project Page</Link> </button> : <></>}
-                {proj.arxiv.length > 0 ? <button className="btn btn-primary"> <Link href={proj.arxiv}>ArXiv</Link> </button> : <></>}
-                {proj.github.length > 0 ? <button className="btn btn-primary"> <Link href={proj.github}>Github</Link> </button> : <></>}
+                {proj.paperPage.length > 0 ? <button className="btn btn-primary"> <Link to={proj.projectPage} target="_blank" rel="noopener noreferrer">Project Page</Link> </button> : <></>}
+                {proj.arxiv.length > 0 ? <button className="btn btn-primary"> <Link to={proj.arxiv} target="_blank" rel="noopener noreferrer">ArXiv</Link> </button> : <></>}
+                {proj.github.length > 0 ? <button className="btn btn-primary"> <Link to={proj.github} target="_blank" rel="noopener noreferrer">Github</Link> </button> : <></>}
             </div>
         </div>
     </div>

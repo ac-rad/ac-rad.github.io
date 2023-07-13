@@ -1,5 +1,5 @@
 import Fuse from 'fuse.js';
-import {projInfo} from './projInfo.js'
+import {projInfo} from './paperInfo.js'
 
 function searchProjects(query) {
     const options = {

@@ -6,7 +6,7 @@ const projInfo = [
         tags: ['Natural Language Processing', 'Program Synthesis', 'Robotics'],
         date: '24-03-2023',
         acceptedTo: ['Under Review'],
-        projectPage: 'https://ac-rad.github.io/clairify',
+        paperPage: 'https://ac-rad.github.io/clairify',
         arxiv: 'https://arxiv.org/abs/2303.14100',
         github: 'https://github.com/ac-rad/xdl-generation'
     },
@@ -14,10 +14,10 @@ const projInfo = [
         image: ['digital-pipette.jpg', 'Robot pouring water with pipette'],
         title: 'Digital pipette: Open hardware for liquid transfer in self-driving laboratories',
         description: 'Self-driving laboratories promise to democratize automated chemical laboratories. Accurate liquid handling is an essential operation in the context of chemical labs, and consequently a self-driving laboratory will require a robotic liquid handling and transfer. Although many pipettes are available for human scientists, robots cannot manipulate these pipettes due to the limitations of current robot gripper morphology. We propose an intuitive yet elegant design for a 3D-printed digital pipette designed for robots to carry out chemical experiments. Performance-evaluation experiments were carried out liquid transfer tasks. Our results show that robots with digital pipette could transfer liquids within 0.5% error. This error is comparable to the baseline set by commercially available human-handled pipettes.',
-        tags: ['Tools'],
+        tags: ['Tools', 'Robotics', 'Hardware', '3D Printing'],
         date: '05-03-2023',
         acceptedTo: ["Under Review"],
-        projectPage: '',
+        paperPage: '',
         arxiv: 'https://doi.org/10.26434/chemrxiv-2023-nvxkg', 
         github: 'https://github.com/ac-rad/digital-pipette'
     },
@@ -25,10 +25,10 @@ const projInfo = [
         image: ['robot-chemist-tamp.jpg', 'Robot pouring water from beaker'],
         title: 'Chemistry Lab Automation via Constrained Task and Motion Planning',
         description: 'Chemists need to perform many laborious and time-consuming experiments in the lab to discover and understand the properties of new materials. To support and accelerate this process, we propose a robot framework for manipulation that autonomously performs chemistry experiments. Our framework receives high-level abstract descriptions of chemistry experiments, perceives the lab workspace, and autonomously plans multi-step actions and motions. The robot interacts with a wide range of lab equipment and executes the generated plans. A key component of our method is constrained task and motion planning using PDDLStream solvers. Preventing collisions and spillage is done by introducing a constrained motion planner. Our planning framework can conduct different experiments employing implemented actions and lab tools. We demonstrate the utility of our framework on pouring skills for various materials and two fundamental chemical experiments for materials synthesis: solubility and recrystallization.',
-        tags: ['Task and motion planning'],
+        tags: ['Task and motion planning', 'Robotics', 'Chemistry', 'Automation'],
         date: '19-12-2022',
         acceptedTo: ["Under Review"],
-        projectPage: 'https://ac-rad.github.io/robot-chemist-tamp/',
+        paperPage: 'https://ac-rad.github.io/robot-chemist-tamp/',
         arxiv: 'https://arxiv.org/abs/2212.09672v2',
         github: ''
     },
@@ -39,7 +39,7 @@ const projInfo = [
         tags: ['Computer Vision', 'Chemistry', 'Machine Learning', 'Data Set'],
         date: '10-09-2020',
         acceptedTo: ["ACS Central Science"],
-        projectPage: 'https://www.cs.toronto.edu/chemselfies/',
+        paperPage: 'https://www.cs.toronto.edu/chemselfies/',
         arxiv: 'https://pubs.acs.org/doi/10.1021/acscentsci.0c00460',
         github: 'https://github.com/aspuru-guzik-group/Computer-vision-for-the-chemistry-lab'
     },
@@ -50,7 +50,7 @@ const projInfo = [
         tags: ['Computer Vision', 'Robotics', 'Machine Learning', 'Data Set'],
         date: '30-09-2021',
         acceptedTo: ["CoRL 2021"],
-        projectPage: 'https://www.pair.toronto.edu/TranspareNet/',
+        paperPage: 'https://www.pair.toronto.edu/TranspareNet/',
         arxiv: 'https://arxiv.org/abs/2110.00087',
         github: 'https://github.com/pairlab/TranspareNet'
     },
@@ -61,7 +61,7 @@ const projInfo = [
         tags: ['Computer Vision', 'Robotics', 'Machine Learning', 'Data Set'],
         date: '23-12-2021',
         acceptedTo: ["Digital Discovery"],
-        projectPage: 'https://www.cs.toronto.edu/matterlab/TransProteus/',
+        paperPage: 'https://www.cs.toronto.edu/matterlab/TransProteus/',
         arxiv: 'https://pubs.rsc.org/en/content/articlehtml/2022/dd/d1dd00014d',
         github: 'https://github.com/sagieppel/Predicting-3D-shape-of-liquid-and-objects-inside-transparent-vessels-as-XYZ-map-from-a-single-image'
     },
@@ -72,7 +72,7 @@ const projInfo = [
         tags: ['Computer Vision', 'Robotics', 'Machine Learning', 'Data Set'],
         date: '22-02-2023',
         acceptedTo: ["ICRA 2023"],
-        projectPage: 'https://ac-rad.github.io/MVTrans/',
+        paperPage: 'https://ac-rad.github.io/MVTrans/',
         arxiv: 'https://arxiv.org/abs/2302.11683',
         github: 'https://github.com/ac-rad/transparent-perception'
     }

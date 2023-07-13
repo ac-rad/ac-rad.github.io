@@ -12,8 +12,8 @@
   .arrows path {
     stroke: white;
     fill: transparent;
-    stroke-width: 4px;
-    animation: arrow 10s infinite;
+    stroke-width: 2px;
+    animation: arrow 2s infinite;
     -webkit-animation: arrow 2s infinite;
   }
   
@@ -76,6 +76,28 @@
     font-size: 1.3rem;
   }
   
+  body::-webkit-scrollbar {
+    display: none;
+  }
+
+  .body {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
   .content {
     background-color: #1f232a;
+  }
+
+  section {
+    font-size: 2rem;
+    text-align: center;
+    text-decoration-line: underline;
+  }
+
+  #progressBar {
+    position: fixed;
+    width: 5px;
+    background-color: #602edd;
+    border-radius: 5px;
   }

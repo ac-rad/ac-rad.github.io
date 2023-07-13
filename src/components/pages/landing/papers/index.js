@@ -1,17 +1,30 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import './proj.css';
+import './paper.css';
 
-import Proj from './proj.js';
-import { projInfo } from './projInfo.js';
-import searchProjects from './searchProj.js';
+import Proj from './paper.js';
+import { projInfo } from './paperInfo.js';
+import searchpapers from './searchPapers.js';
 
 function SearchComponent() {
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState([]);
+  const [cardsDisplayed, setCardsDisplayed] = useState(3);
+
+  useEffect(() => {
+    const handleShowMore = () => {
+      setCardsDisplayed(prevCardsDisplayed => prevCardsDisplayed + 3);
+    };
+
+    document.getElementById('showMore').addEventListener('click', handleShowMore);
+
+    return () => {
+      document.getElementById('showMore').removeEventListener('click', handleShowMore);
+    };
+  }, []);
 
   const handleSearch = (searchTerm) => {
-    const results = searchProjects(searchTerm);
+    const results = searchpapers(searchTerm);
 
     const sortedResults = results
       .sort((a, b) => {
@@ -19,7 +32,7 @@ function SearchComponent() {
         const dateB = new Date(b.date.split('-').reverse().join('-'));
         return dateB - dateA;
       })
-      .slice(0, 5);
+      .slice(0, cardsDisplayed);
 
     setSearchResults(sortedResults);
   };
@@ -35,7 +48,7 @@ function SearchComponent() {
           tags: projData.tags,
           date: projData.date,
           acceptedTo: projData.acceptedTo,
-          projectPage: projData.projectPage,
+          paperPage: projData.paperPage,
           arxiv: projData.arxiv,
           github: projData.github,
         }}
@@ -48,7 +61,7 @@ function SearchComponent() {
         const dateB = new Date(b.date.split('-').reverse().join('-'));
         return dateB - dateA;
       })
-      .slice(0, 6)
+      .slice(0, cardsDisplayed)
       .map((projData) => (
         <Proj
           key={projData.title}
@@ -59,7 +72,7 @@ function SearchComponent() {
             tags: projData.tags,
             date: projData.date,
             acceptedTo: projData.acceptedTo,
-            projectPage: projData.projectPage,
+            paperPage: projData.paperPage,
             arxiv: projData.arxiv,
             github: projData.github,
           }}
@@ -69,7 +82,7 @@ function SearchComponent() {
 
   return (
     <>
-      <section id="projects">Projects</section>
+      <section id="papers">Papers</section>
       <input
         type="text"
         className="search input input-bordered"
@@ -83,6 +96,7 @@ function SearchComponent() {
       <nav className="grid sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4 justify-items-center w-full">
         {projCards}
       </nav>
+      <button className='btn bg-base-300 m-auto block' id="showMore">Show More</button>
     </>
   );
 }
