@@ -32,6 +32,15 @@ const Proj = ({proj}) => {
       <div className="projCardImgContainer">
         <img className="projCardImg" src={imageSrc} alt={proj.image[1]} />
       </div>
+      <div className="flex flex-wrap mx-2 mt-4 gap-2 justify-items-center w-full">
+        {proj.tags.map((tag) => {
+                  return (
+                      <div className="badge whitespace-nowrap badge-outline">{tag}</div>
+                      );
+                  }
+              )}
+
+      </div>
         <div className="card-body">
             <h2 className="card-title">{proj.title}</h2>
             <p>{proj.description}</p>
