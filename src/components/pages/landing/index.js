@@ -17,14 +17,21 @@ const Landing = () => {
   const [parallaxOffset, setParallaxOffset] = useState(0);
 
   useEffect(() => {
-    const updateParallax = () => {
-      setParallaxOffset(window.scrollY * 0.5);
-    };
-    window.addEventListener('scroll', updateParallax);
+    function scrollLoop() {
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+      document.getElementById('progressBar').style.height = `${(scrollTop / (document.body.offsetHeight - window.innerHeight)) * 100}%`;
+      setParallaxOffset(scrollTop * 0.5);
+
+      requestAnimationFrame(scrollLoop);
+    }
+
+    scrollLoop();
+
     return () => {
-      window.removeEventListener('scroll', updateParallax);
+      // Clean up the scroll event listener when the component unmounts
+      cancelAnimationFrame(scrollLoop);
     };
-  }, []);
+  });
 
   return (
     <>
@@ -54,7 +61,6 @@ const Landing = () => {
         <br/>
         <div className="content">
           <Papers />
-         
         </div>
       </main>
     </>

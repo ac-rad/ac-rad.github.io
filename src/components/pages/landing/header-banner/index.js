@@ -31,7 +31,7 @@ const Header = ({ navMaxHeight, headerRef }) => {
             >
                 <div id="logo" className="col-start-1">
                     <Link to="home" spy={true} smooth={true} offset={0} duration={500} onClick={closeDropdown}>
-                        <img src={logo} width="350" height="32.125"></img>
+                        <img src={logo} width="350"></img>
                     </Link>
                 </div>
                 <div className="col-start-2">

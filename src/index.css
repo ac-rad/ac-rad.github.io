@@ -25,6 +25,3 @@ img, svg, video, canvas, audio, iframe, embed, object {
 }
 
 
-#video {
-    height: calc(100vh - 3.75rem);
-}
