@@ -49,7 +49,24 @@
     line-height: 1.2em; /* Set the line height based on your design */
     max-height: 70%;
     overflow-y: scroll;
+    padding-right: 5px;
 }
+
+.card-body p::-webkit-scrollbar {
+    width: 5px;
+  }
+
+.card-body p::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 10px;
+}
+
+.card-body p::-webkit-scrollbar-thumb {
+    background: #602edd;
+    border-radius: 10px;
+  }
+
+
 
 .card-body p::before {
     content: "";

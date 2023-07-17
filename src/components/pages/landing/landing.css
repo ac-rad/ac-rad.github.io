@@ -100,7 +100,7 @@
     text-decoration-line: underline;
   }
 
-  #progressBar {
+  .progressBar {
     position: fixed;
     width: 5px;
     background-color: #602edd;
