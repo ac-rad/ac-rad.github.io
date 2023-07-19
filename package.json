@@ -8,6 +8,7 @@
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.4.3",
     "fuse.js": "^6.6.2",
+    "gh-pages": "^5.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.14.1",
@@ -43,7 +44,6 @@
   },
   "devDependencies": {
     "daisyui": "^3.1.10",
-    "gh-pages": "^5.0.0",
     "tailwindcss": "^3.3.2"
   },
   "description": "This ReactJS project uses [TailwindCSS](https://tailwindcss.com) + [daisyUI](https://daisyui.com) for CSS frameworks.\r It also uses [gh-pages](https://www.npmjs.com/package/gh-pages) for static ui deployment to [Github Pages](https://pages.github.com).",
