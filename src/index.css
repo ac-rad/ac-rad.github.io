@@ -39,7 +39,10 @@ embed,
 object {
     display: inline-block;
 }
+<<<<<<< Updated upstream
 
 #video {
     height: calc(100vh - 3.75rem);
 }
+=======
+>>>>>>> Stashed changes
