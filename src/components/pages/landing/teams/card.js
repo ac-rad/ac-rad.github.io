@@ -9,7 +9,7 @@ const Card = ({card}) => {
       <br/>
       <span className="teamPageCardName">{card.name}</span>
       <br/>
-      <span className="teamPageCardDesc">{card.position}</span>
+      <span className="teamPageCardDesc">{card.degree}</span>
       <br/>
       <span className="teamPageCardDesc">{card.discipline}</span>
       <br/>

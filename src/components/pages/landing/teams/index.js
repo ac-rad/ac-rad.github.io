@@ -1,44 +1,27 @@
 import React from 'react';
 import CardGrid from './CardGrid';
 import Card from './card';
-import { CurrentExecInfo } from './memberInfo/teamInfo';
-import { MemberCardInfo } from './memberInfo/MemberCardInfo.js';
-import { FormerExecutiveCardInfo } from './memberInfo/FormerExecutiveCardInfo.js';
+import { Members } from './memberInfo/Member.js';
+import { PrincipalInvestigators } from './memberInfo/PI.js';
 
-const currentExecCards = CurrentExecInfo.map((memberData) => {
+const principalInvestigatorCards = PrincipalInvestigators.map((memberData) => {
     return (
         <Card
             card={{
-                image: memberData.image,
                 name: memberData.name,
-                position: memberData.position,
-                discipline: memberData.discipline,
+                image: memberData.image,
             }}
         />
     );
 });
 
-const memberCards = MemberCardInfo.map((memberData) => {
+const memberCards = Members.map((memberData) => {
     return (
         <Card
             card={{
-                image: memberData.image,
                 name: memberData.name,
-                position: memberData.position,
-                discipline: memberData.discipline,
-            }}
-        />
-    );
-});
-
-const formerExecCards = FormerExecutiveCardInfo.map((memberData) => {
-    return (
-        <Card
-            card={{
                 image: memberData.image,
-                name: memberData.name,
-                position: memberData.position,
-                discipline: memberData.discipline,
+                degree: memberData.degree,
             }}
         />
     );
@@ -51,10 +34,10 @@ const index = () => {
             <section>Teams</section>
             <div className="ExecCardContainer">
                     <div className="ExecTitleBorderContainer">
-                        <p className="blackHeader">Current Executives</p>
+                        <p className="blackHeader">Principal Investgators</p>
                     </div>
                 <div className="CardGridContainer">
-                    <CardGrid cards={currentExecCards} />
+                    <CardGrid cards={principalInvestigatorCards} />
                 </div>
             </div>
             <div className="GeneralCardContainer">
@@ -65,14 +48,7 @@ const index = () => {
                     <CardGrid cards={memberCards} />
                 </div>
             </div>
-            <div className="FormerCardContainer">
-                <div className="FormerExecBorderContainer">
-                    <p className="WhiteHeader">Former Executives</p>
-                </div>
-                <div className="CardGridContainer">
-                    <CardGrid cards={formerExecCards} />
-                </div>
-            </div>
+            
         </div>
     );
 };

@@ -62,6 +62,8 @@ const Landing = () => {
         <div className="content">
           <Papers />
         </div>
+        <div className="divider"></div>
+        <Teams />
       </main>
     </>
   );
