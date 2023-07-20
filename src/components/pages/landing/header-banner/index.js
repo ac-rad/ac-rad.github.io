@@ -54,27 +54,62 @@ const Header = ({ navMaxHeight, headerRef }) => {
             `}
                     >
                         <li>
-                            <Link to="home" spy={true} smooth={true} offset={-1 * navMaxHeight - 50} duration={500} onClick={closeDropdown}>
+                            <Link
+                                to="home"
+                                spy={true}
+                                smooth={true}
+                                offset={-1 * window.innerHeight * (navMaxHeight / 100)}
+                                duration={500}
+                                onClick={closeDropdown}
+                            >
                                 <span className="md:p-4 py-2 block hover:text-themeOrange">Home</span>
                             </Link>
                         </li>
                         <li>
-                            <Link to="projInfo" spy={true} smooth={true} offset={-1 * navMaxHeight - 50} duration={500} onClick={closeDropdown}>
+                            <Link
+                                to="projInfo"
+                                spy={true}
+                                smooth={true}
+                                offset={-1 * window.innerHeight * (navMaxHeight / 100)}
+                                duration={500}
+                                onClick={closeDropdown}
+                            >
                                 <span className="md:p-4 py-2 block hover:text-themeOrange">About</span>
                             </Link>
                         </li>
                         <li>
-                            <Link to="news" spy={true} smooth={true} offset={-1 * navMaxHeight - 50} duration={500} onClick={closeDropdown}>
+                            <Link
+                                to="news"
+                                spy={true}
+                                smooth={true}
+                                offset={-1 * window.innerHeight * (navMaxHeight / 100)}
+                                duration={500}
+                                onClick={closeDropdown}
+                            >
                                 <span className="md:p-4 py-2 block hover:text-themeOrange">News</span>
                             </Link>
                         </li>
                         <li>
-                            <Link to="papers" spy={true} smooth={true} offset={-1 * navMaxHeight - 50} duration={500} onClick={closeDropdown}>
+                            <Link
+                                to="papers"
+                                spy={true}
+                                smooth={true}
+                                offset={-1 * window.innerHeight * (navMaxHeight / 100)}
+                                duration={500}
+                                onClick={closeDropdown}
+                            >
                                 <span className="md:p-4 py-2 block hover:text-themeOrange">Papers</span>
                             </Link>
                         </li>
                         <li>
-                            <Link to="teams" spy={true} smooth={true} offset={-1 * navMaxHeight - 50} duration={500} onClick={closeDropdown}>
+                            <Link
+                                to="teams"
+                                spy={true}
+                                smooth={true}
+                                offset={-1 * window.innerHeight * (navMaxHeight / 100)}
+                                duration={500}
+                                onClick={closeDropdown}
+                            >
                                 <span className="md:p-4 py-2 block hover:text-themeOrange">Teams</span>
                             </Link>
                         </li>
