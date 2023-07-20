@@ -8,20 +8,34 @@
     .text-themeOrange:hover {
         color: #fca311;
     }
+    .bg-themeOrange {
+        background-color: #fca311;
+    }
 
     .text-themeNavy,
     .text-themeNavy:hover {
         color: #14213d;
+    }
+    .bg-themeNavy {
+        background-color: #14213d;
     }
 
     .text-themeSilver,
     .text-themeSilver:hover {
         color: #e5e5e5;
     }
+    .bg-themeSilver {
+        background-color: #e5e5e5;
+    }
 }
 
-img, svg, video, canvas, audio, iframe, embed, object {
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
     display: inline-block;
 }
-
-

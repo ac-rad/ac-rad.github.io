@@ -10,6 +10,7 @@ const principalInvestigatorCards = PrincipalInvestigators.map((memberData) => {
             card={{
                 name: memberData.name,
                 image: memberData.image,
+                className: 'text-white',
             }}
         />
     );
@@ -22,6 +23,7 @@ const memberCards = Members.map((memberData) => {
                 name: memberData.name,
                 image: memberData.image,
                 degree: memberData.degree,
+                className: 'text-white',
             }}
         />
     );
@@ -29,13 +31,12 @@ const memberCards = Members.map((memberData) => {
 
 const index = () => {
     return (
-        
-        <div id="teams">
+        <div id="teams" className="bg-themeNavy">
             <section>Teams</section>
             <div className="ExecCardContainer">
-                    <div className="ExecTitleBorderContainer">
-                        <p className="blackHeader">Principal Investgators</p>
-                    </div>
+                <div className="ExecTitleBorderContainer">
+                    <p className="blackHeader">Principal Investgators</p>
+                </div>
                 <div className="CardGridContainer">
                     <CardGrid cards={principalInvestigatorCards} />
                 </div>
@@ -48,7 +49,6 @@ const index = () => {
                     <CardGrid cards={memberCards} />
                 </div>
             </div>
-            
         </div>
     );
 };
