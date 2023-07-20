@@ -1,8 +1,7 @@
 /* landing.css */
 
-
 #video {
-  height: calc(100vh - 77.01px);
+    height: calc(100vh - 77.01px);
 }
 
 .arrows {
@@ -12,62 +11,62 @@
     left: 50%;
     margin-left: -30px;
     bottom: 20px;
-  }
-  
-  .arrows path {
+}
+
+.arrows path {
     stroke: white;
     fill: transparent;
     stroke-width: 2px;
     animation: arrow 2s infinite;
     -webkit-animation: arrow 2s infinite;
-  }
-  
-  @keyframes arrow {
+}
+
+@keyframes arrow {
     0% {
-      opacity: 0;
+        opacity: 0;
     }
     40% {
-      opacity: 1;
+        opacity: 1;
     }
     80% {
-      opacity: 0;
+        opacity: 0;
     }
     100% {
-      opacity: 0;
+        opacity: 0;
     }
-  }
-  
-  @-webkit-keyframes arrow /* Safari and Chrome */ {
+}
+
+@-webkit-keyframes arrow /* Safari and Chrome */ {
     0% {
-      opacity: 0;
+        opacity: 0;
     }
     40% {
-      opacity: 1;
+        opacity: 1;
     }
     80% {
-      opacity: 0;
+        opacity: 0;
     }
     100% {
-      opacity: 0;
+        opacity: 0;
     }
-  }
-  
-  .arrows path.a1 {
+}
+
+.arrows path.a1 {
     animation-delay: -1s;
     -webkit-animation-delay: -1s; /* Safari and Chrome */
-  }
-  
-  .arrows path.a2 {
+}
+
+.arrows path.a2 {
     animation-delay: -0.5s;
     -webkit-animation-delay: -0.5s; /* Safari and Chrome */
-  }
-  
-  .arrows path.a3 {
+}
+
+.arrows path.a3 {
     animation-delay: 0s;
     -webkit-animation-delay: 0s; /* Safari and Chrome */
-  }
+}
 
-  div#videoContent hgroup {
+div#videoContent hgroup {
     transform: translate(-50%, -50%);
     display: inline-block;
     text-align: center;
@@ -79,31 +78,30 @@
     background-color: rgba(0, 0, 0, 0.688);
     z-index: 2;
     font-size: 1.3rem;
-  }
-  
-  body::-webkit-scrollbar {
+}
+
+body::-webkit-scrollbar {
     display: none;
-  }
+}
 
-  .body {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-  }
+.body {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
 
-  .content {
+.content {
     background-color: #1f232a;
-  }
+}
 
-  section {
+section {
     font-size: 2rem;
     text-align: center;
-    text-decoration-line: underline;
-  }
+}
 
-  .progressBar {
+.progressBar {
     position: fixed;
     width: 5px;
     background-color: #602edd;
     border-radius: 5px;
     z-index: 1;
-  }
+}

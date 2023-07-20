@@ -3,6 +3,7 @@ import { Link } from 'react-scroll';
 import videoBg from '../../../assets/banner_video.mp4';
 import './landing.css';
 import Header from './header-banner/index.js';
+import About from './info/index.js';
 import Papers from './papers/index.js';
 import News from './news/index.js';
 import Teams from './teams/index.js';
@@ -59,6 +60,7 @@ const Landing = () => {
                 </div>
                 <br />
                 <div className="content">
+                    <About />
                     <Papers />
                 </div>
                 <div className="divider"></div>
