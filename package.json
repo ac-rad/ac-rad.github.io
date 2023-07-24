@@ -1,5 +1,5 @@
 {
-  "homepage": "https://github.com/ac-rad/ac-rad.github.io",
+  "homepage": "https://github.com/ac-rad.github.io",
   "name": "ac-rad.github.io",
   "version": "0.1.0",
   "private": true,
@@ -22,7 +22,8 @@
     "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "format": "prettier --write \"src/**/*.js\" \"src/**/*.css\""
   },
   "eslintConfig": {
     "extends": [
@@ -44,6 +45,7 @@
   },
   "devDependencies": {
     "daisyui": "^3.1.10",
+    "prettier": "^3.0.0",
     "tailwindcss": "^3.3.2"
   },
   "description": "This ReactJS project uses [TailwindCSS](https://tailwindcss.com) + [daisyUI](https://daisyui.com) for CSS frameworks.\r It also uses [gh-pages](https://www.npmjs.com/package/gh-pages) for static ui deployment to [Github Pages](https://pages.github.com).",

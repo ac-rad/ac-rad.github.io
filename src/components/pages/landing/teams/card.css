@@ -4,7 +4,6 @@
   justify-content: center;
   align-items: center;
   gap: 2rem;
-
 }
 
 #teams {
@@ -16,7 +15,6 @@
 #teams > * > :first-child {
   margin-bottom: 2rem;
 }
-
 
 #teams > * > * {
   display: flex;
@@ -38,6 +36,7 @@
   padding: 15px;
   border-radius: 10px;
   color-scheme: dark;
+  font-size: 1rem;
 }
 
 .teamPageCardImg {
