@@ -91,6 +91,7 @@ body::-webkit-scrollbar {
 
 .content {
   position: relative;
+  background-color: var(--bg-Primary);
 }
 
 section {

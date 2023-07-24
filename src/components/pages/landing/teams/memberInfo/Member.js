@@ -25,10 +25,5 @@ export const Members = [
     name: "Marta Skreta",
     degree: "PhD",
     image: JohnDoe,
-  },
-  {
-    name: "Jane Doe",
-    degree: "Audio",
-    image: JohnDoe,
-  },
+  }
 ];

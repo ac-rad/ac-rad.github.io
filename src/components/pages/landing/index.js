@@ -77,7 +77,6 @@ const Landing = () => {
             </svg>
           </div>
         </div>
-        <br />
         <div className="content">
           <About />
           <Papers />
