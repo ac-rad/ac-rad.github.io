@@ -18,6 +18,8 @@ const Landing = () => {
   const [parallaxOffset, setParallaxOffset] = useState(0);
 
   useEffect(() => {
+    for (let i = 0; i < document.getElementById)
+
     function scrollLoop() {
       const scrollTop = window.scrollY || document.documentElement.scrollTop;
       document.getElementById("progressBar").style.height = `${
@@ -66,7 +68,7 @@ const Landing = () => {
             ></div>
             <hgroup>
               <h1 className="type-effect">
-                Where Material and Chemical Sciences Meet Robotics and AI
+                
               </h1>
             </hgroup>
             <svg className="arrows">
