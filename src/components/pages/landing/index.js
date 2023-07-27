@@ -57,18 +57,17 @@ const Landing = () => {
             className="w-full h-full object-cover"
           />
           <div
-            id="overlay"
-            className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50"
-          ></div>
-          <div
             id="videoContent"
             className="absolute w-full h-full flex flex-col justify-center items-center text-neutral-100"
           >
+            <div
+              id="overlay"
+              className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-20"
+            ></div>
             <hgroup>
-              <h1 className="text-2xl">
-                Material and Chemical Sciences Meet Robotics and AI
+              <h1 className="type-effect">
+                Where Material and Chemical Sciences Meet Robotics and AI
               </h1>
-              <p>Learn More</p>
             </hgroup>
             <svg className="arrows">
               <path className="a1" d="M0 0 L22.5 24 L45 0"></path>

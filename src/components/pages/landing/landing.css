@@ -8,8 +8,6 @@
   width: 60px;
   height: 72px;
   position: absolute;
-  left: 50%;
-  margin-left: -30px;
   bottom: 20px;
 }
 
@@ -67,17 +65,14 @@
 }
 
 div#videoContent hgroup {
-  transform: translate(-50%, -50%);
   display: inline-block;
   text-align: center;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  border: 3px solid #fff;
-  padding: 0.5em 3em;
-  background-color: rgba(0, 0, 0, 0.688);
+
+  top: 3%;
   z-index: 2;
-  font-size: 1.3rem;
+  font-size: 70%;
+  color: var(--text-Primary)
 }
 
 body::-webkit-scrollbar {
@@ -104,7 +99,7 @@ section h1 {
     background-color: var(--bg-Secondary);
     width: fit-content;
     margin: 0 auto 2rem auto;
-    padding: 0 10rem;
+    padding: 0.5rem 4rem;
 }
 
 .content div.content_divider_wrapper:nth-child(odd) section{
@@ -129,12 +124,12 @@ section h1 {
 }
 
 
-.progressBar {
+#progressBar {
   position: fixed;
   width: 5px;
-  background-color: var(--bg-themeOrange);
-  border-radius: 5px;
-  z-index: 1;
+  background-color: var(--bg-Secondary);
+  border-radius: 0 0 5px 5px;
+  z-index: 9999;
 }
 
 .content_divider_wrapper {
@@ -148,4 +143,35 @@ section h1 {
   position: relative;
   top: 0;
   left: 0;
+}
+
+.type-effect  {
+  color: var(--text-Primary);
+  max-width: 80vw;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  word-break: break-all;
+  word-wrap: break-word;
+  border-right: .15em solid var(--text-Secondary); /* The typwriter cursor */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  font-size: 2rem;
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+@media screen {
+  
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
 }

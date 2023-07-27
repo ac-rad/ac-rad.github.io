@@ -30,7 +30,7 @@
 .teamPageCard {
   display: inline-block;
   text-align: center;
-  width: 250px;
+  height: 250px;
   height: fit-content;
   background: linear-gradient(0.25turn, #39484e, #24424c, #313952);
   padding: 15px;
