@@ -1,6 +1,6 @@
 import React from "react";
 
-const About = () => {
+const Mission = () => {
   return (
     <>
     <div class="content_divider_wrapper">
@@ -18,4 +18,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Mission;

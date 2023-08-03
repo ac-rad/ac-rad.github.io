@@ -129,7 +129,7 @@ section h1 {
   width: 5px;
   background-color: var(--bg-Secondary);
   border-radius: 0 0 5px 5px;
-  z-index: 9999;
+  z-index: 1;
 }
 
 .content_divider_wrapper {

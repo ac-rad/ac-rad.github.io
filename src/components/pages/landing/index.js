@@ -3,9 +3,9 @@ import { Link } from "react-scroll";
 import videoBg from "../../../assets/banner_video.mp4";
 import "./landing.css";
 import Header from "./header-banner/index.js";
-import About from "./info/index.js";
+import Mission from "./info/index.js";
 import Papers from "./papers/index.js";
-import News from "./news/index.js";
+// import News from "./news/index.js";
 import Teams from "./teams/index.js";
 
 const Landing = () => {
@@ -29,7 +29,6 @@ const Landing = () => {
     scrollLoop();
 
     return () => {
-      // Clean up the scroll event listener when the component unmounts
       cancelAnimationFrame(scrollLoop);
     };
   });
@@ -75,7 +74,7 @@ const Landing = () => {
           </div>
         </div>
         <div className="content">
-          <About />
+          <Mission />
           <Papers />
           <Teams />
         </div>

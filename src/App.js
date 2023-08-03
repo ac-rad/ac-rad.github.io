@@ -6,7 +6,6 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<Landing />} />
-        <Route path="/about" element={<About />} />
         <Route path="/error" element={<Error />} />
       </Routes>
       <Footer />

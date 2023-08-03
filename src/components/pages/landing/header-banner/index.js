@@ -85,11 +85,11 @@
                   onClick={closeDropdown}
                 >
                   <span className="md:p-4 py-2 block hover:text-themeOrange">
-                    About
+                    Mission
                   </span>
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link
                   to="news"
                   spy={true}
@@ -102,7 +102,7 @@
                     News
                   </span>
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link
                   to="papers"

@@ -13,8 +13,7 @@ function NavButton({ linkTo, children }) {
 const Footer = () => {
   return (
     <footer>
-      <section>footer</section>
-      <NavButton linkTo="/about">footer button</NavButton>
+      <section>&copy; 2023 AC-RAAD | All Rights Reserved |</section>
     </footer>
   );
 };
