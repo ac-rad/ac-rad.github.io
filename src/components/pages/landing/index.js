@@ -9,16 +9,12 @@ import News from "./news/index.js";
 import Teams from "./teams/index.js";
 
 const Landing = () => {
-  const [click, setClick] = useState(false);
-  const handleClick = () => setClick(!click);
-  const closeMenu = () => setClick(false);
 
   const headerRef = useRef(null);
   const navMaxHeight = useState(0);
   const [parallaxOffset, setParallaxOffset] = useState(0);
 
   useEffect(() => {
-    for (let i = 0; i < document.getElementById)
 
     function scrollLoop() {
       const scrollTop = window.scrollY || document.documentElement.scrollTop;
