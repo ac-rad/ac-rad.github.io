@@ -12,11 +12,11 @@
       setShowDropdown(false);
     };
     let windowWidth = window.innerWidth; //in px
-    let navMaxHeight = (windowWidth >= 768) ? 75 : 150;
+    let navMaxHeight = (windowWidth >= 768) ? 75 : 10;
     return (
       <header
 
-        className=" sticky top-0 z-50 w-full"
+        className="bg-white sticky top-0 z-50 w-full"
         style={
           { 
           height: `${navMaxHeight}px` 
