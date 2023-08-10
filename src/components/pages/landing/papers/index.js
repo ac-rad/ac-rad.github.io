@@ -92,7 +92,7 @@ function SearchComponent() {
 
 
       <section id="papers" className="bg-themeSilver">
-        <h1>Publications and Work</h1>
+        <h1 className = "text-3xl">Publications and Work</h1>
         <input
           type="text"
           className="search input input-bordered"

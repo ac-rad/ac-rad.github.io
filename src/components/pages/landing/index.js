@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 import videoBg from "../../../assets/banner_video.mp4";
 import "./landing.css";
@@ -34,7 +34,7 @@ const Landing = () => {
 
   return (
     <>
-      <main id="home" className="antialiased w-full min-h-screen">
+      <main id="home" className="antialiased w-full min-h-screen text-base">
         <div id="progressBar"></div>
         <Header />
         <div

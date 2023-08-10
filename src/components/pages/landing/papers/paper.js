@@ -48,7 +48,7 @@ const Proj = ({ proj }) => {
             style={{ marginTop: 1 + "em" }}
           >
             {proj.paperPage.length > 0 ? (
-              <button className="btn btn-primary bg-themeOrange hover:bg-themeNavy text-white border-none">
+              <button className="btn btn-primary bg-themeOrange hover:bg-themeNavy text-black border-none">
                 {" "}
                 <Link
                   to={proj.projectPage}
@@ -62,7 +62,7 @@ const Proj = ({ proj }) => {
               <></>
             )}
             {proj.arxiv.length > 0 ? (
-              <button className="btn btn-primary bg-themeOrange hover:bg-themeNavy text-white border-none">
+              <button className="btn btn-primary bg-themeOrange hover:bg-themeNavy text-black border-none">
                 {" "}
                 <Link to={proj.arxiv} target="_blank" rel="noopener noreferrer">
                   ArXiv
@@ -72,7 +72,7 @@ const Proj = ({ proj }) => {
               <></>
             )}
             {proj.github.length > 0 ? (
-              <button className="btn btn-primary bg-themeOrange hover:bg-themeNavy text-white border-none">
+              <button className="btn btn-primary bg-themeOrange hover:bg-themeNavy text-black border-none">
                 {" "}
                 <Link
                   to={proj.github}
