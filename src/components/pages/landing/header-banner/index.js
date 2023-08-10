@@ -16,7 +16,7 @@
     return (
       <header
 
-        className=" sticky top-0 z-50 w-full pb-[10px] "
+        className=" sticky top-0 z-50 w-full"
         style={
           { 
           height: `${navMaxHeight}px` 
@@ -71,7 +71,7 @@
                   to="home"
                   spy={true}
                   smooth={true}
-                  offset={-1 * navMaxHeight}
+                  offset={0}
                   duration={500}
                   onClick={closeDropdown}
                 >
