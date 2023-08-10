@@ -43,7 +43,7 @@
               className="md:hidden"
               onClick={handleToggleDropdown}
               aria-label="Toggle navigation menu"
-              style={{ position: "relative", top: -50+"px"}}
+              style={{ position: "relative", top: -50+"px", height: 0}}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
