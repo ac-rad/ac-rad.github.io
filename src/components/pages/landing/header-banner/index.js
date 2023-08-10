@@ -12,7 +12,7 @@
       setShowDropdown(false);
     };
     let windowWidth = window.innerWidth; //in px
-    let navMaxHeight = (windowWidth >= 768) ? 75 : 10;
+    let navMaxHeight = (windowWidth >= 768) ? 75 : 120;
     return (
       <header
 
