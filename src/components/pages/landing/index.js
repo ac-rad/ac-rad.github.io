@@ -10,8 +10,7 @@ import Teams from "./teams/index.js";
 
 const Landing = () => {
 
-  const headerRef = useRef(null);
-  const navMaxHeight = useState(0);
+
   const [parallaxOffset, setParallaxOffset] = useState(0);
 
   useEffect(() => {
@@ -37,7 +36,7 @@ const Landing = () => {
     <>
       <main id="home" className="antialiased w-full min-h-screen">
         <div id="progressBar"></div>
-        <Header navMaxHeight={navMaxHeight} headerRef={headerRef} />
+        <Header />
         <div
           id="video"
           className="relative -z-50 flex flex-col items-center justify-center"

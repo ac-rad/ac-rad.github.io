@@ -2,7 +2,7 @@
   import { Link } from "react-scroll";
   import logo from "../../../../assets/ac-rad.png";
 
-  const Header = ({ navMaxHeight, headerRef }) => {
+  const Header = () => {
     const [showDropdown, setShowDropdown] = useState(false);
 
     const handleToggleDropdown = () => {
@@ -11,12 +11,17 @@
     const closeDropdown = () => {
       setShowDropdown(false);
     };
-
+    let windowWidth = window.innerWidth; //in px
+    let navMaxHeight = (windowWidth >= 768) ? 75 : 150;
     return (
       <header
-        ref={headerRef}
-        className="sticky top-0 z-50 w-full"
-        style={{ height: `clamp(${navMaxHeight}vh, 100%)` }}
+
+        className=" sticky top-0 z-50 w-full pb-[10px] "
+        style={
+          { 
+          height: `${navMaxHeight}px` 
+          }
+        }
       >
         <nav
           className={`flex flex-col md:flex-row items-center justify-between w-full py-4 md:py-0 px-4 text-lg text-gray-700 bg-white`}
@@ -66,7 +71,7 @@
                   to="home"
                   spy={true}
                   smooth={true}
-                  offset={-1 * window.innerHeight * (navMaxHeight / 100)}
+                  offset={-1 * navMaxHeight}
                   duration={500}
                   onClick={closeDropdown}
                 >
@@ -80,7 +85,7 @@
                   to="projInfo"
                   spy={true}
                   smooth={true}
-                  offset={-1 * window.innerHeight * (navMaxHeight / 100)}
+                  offset={-1 * navMaxHeight}
                   duration={500}
                   onClick={closeDropdown}
                 >
@@ -108,7 +113,7 @@
                   to="papers"
                   spy={true}
                   smooth={true}
-                  offset={-1 * window.innerHeight * (navMaxHeight / 100)}
+                  offset={-1 * navMaxHeight}
                   duration={500}
                   onClick={closeDropdown}
                 >
@@ -122,7 +127,7 @@
                   to="teams"
                   spy={true}
                   smooth={true}
-                  offset={-1 * window.innerHeight * (navMaxHeight / 100)}
+                  offset={-1 * navMaxHeight}
                   duration={500}
                   onClick={closeDropdown}
                 >
