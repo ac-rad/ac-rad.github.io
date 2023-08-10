@@ -24,7 +24,7 @@ const Proj = ({ proj }) => {
 
   return (
     <>
-      <div className="card card-compact w-96 bg-base-300 shadow-xl bg-white text-black">
+      <div className="card card-compact w-72 sm:w-96 bg-base-300 shadow-xl bg-white text-black">
         <div className="projCardImgContainer">
           <img className="projCardImg" src={imageSrc} alt={proj.image[1]} />
         </div>
