@@ -1,6 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
 import videoBg from '../../../assets/banner_video.mp4';
+import fallbackBg from '../../../assets/banner_fallbackGif.gif';
 import './landing.css';
 import Header from './header-banner/index.js';
 import Mission from './info/index.js';
@@ -9,10 +10,11 @@ import Papers from './papers/index.js';
 import Teams from './teams/index.js';
 
 const Landing = () => {
+    //parallax effects
     const [parallaxOffset, setParallaxOffset] = useState(0);
 
+    //bg video handling. NOTE: pls use an animated gif for the fallbackImage.
     const videoRef = useRef(null);
-
     useEffect(() => {
         const handleCanPlayThrough = () => {
             videoRef.current.play();
@@ -24,7 +26,15 @@ const Landing = () => {
             videoRef.current.removeEventListener('canplaythrough', handleCanPlayThrough);
         };
     }, []);
+    const handleVideoError = () => {
+        //handling is in case autoplay is natively denied on a platform (ex. safari) or by the user agent.
+        videoRef.current.style.display = 'none';
+        const fallbackImage = document.createElement('img');
+        fallbackImage.src = fallbackBg; //from import
+        document.body.appendChild(fallbackImage);
+    };
 
+    //progress bar
     useEffect(() => {
         function scrollLoop() {
             const scrollTop = window.scrollY || document.documentElement.scrollTop;
@@ -54,7 +64,7 @@ const Landing = () => {
                         transform: `translate3d(0, ${parallaxOffset}px, 0)`,
                     }}
                 >
-                    <video src={videoBg} ref={videoRef} autoPlay loop muted playsInline className="w-full h-full object-cover">
+                    <video src={videoBg} ref={videoRef} onError={handleVideoError} autoPlay loop muted playsInline className="w-full h-full object-cover">
                         Sorry, your browser does not support HTML5 video.
                     </video>
                     <div id="videoContent" className="absolute w-full h-full flex flex-col justify-center items-center text-neutral-100">
