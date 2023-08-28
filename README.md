@@ -87,7 +87,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ## Adding Papers
 
-To add papers go to `src\components\pages\landing\papers\paperInfo.js` and insert your paper in the following format (don't forget to `npm run deploy` after adding it):
+To add papers go to `src\components\pages\landing\papers\paperInfo.js` and insert your paper in the following format (The last three fields are optional, leave blank if N\A. Don't forget to `npm run deploy` after adding it):
 
 ```javascript
 {
@@ -104,3 +104,7 @@ To add papers go to `src\components\pages\landing\papers\paperInfo.js` and inser
     github: "https://github.com/ac-rad/xdl-generation",
   }
   ```
+
+  ## Modifying Content
+
+  The content displayed on the page is organized into sections, each section is located in `src\components\pages\landing`. To add a section simply create a new directory under landing, then create an index.js as well as any additional files. Don't forget to include them in the DOM by importing them in `src\components\pages\landing\index.js`.
