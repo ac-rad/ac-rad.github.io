@@ -83,3 +83,24 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+## Adding Papers
+
+To add papers go to `src\components\pages\landing\papers\paperInfo.js` and insert your paper in the following format (don't forget to `npm run deploy` after adding it):
+
+```javascript
+{
+    image: ["clairify.jpg", "Robot Arm preparing food"],
+    title:
+      "Errors are Useful Prompts: Instruction Guided Task Programming with Verifier-Assisted Iterative Prompting",
+    description:
+      "Generating low-level robot task plans from high-level natural language instructions remains a challenging problem. Although large language models have shown promising results in generating plans, the accuracy of the output remains unverified. Furthermore, the lack of domain-specific language data poses a limitation on the applicability of these models. In this paper, we propose CLAIRIFY, a novel approach that combines automatic iterative prompting with program verification to ensure programs written in data-scarce domain-specific language are syntactically valid and incorporate environment constraints. Our approach provides effective guidance to the language model on generating structured-like task plans by incorporating any errors as feedback, while the verifier ensures the syntactic accuracy of the generated plans. We demonstrate the effectiveness of CLAIRIFY in planning chemistry experiments by achieving state-of-the-art results. We also show that the generated plans can be executed on a real robot by integrating them with a task and motion planner.",
+    tags: ["Natural Language Processing", "Program Synthesis", "Robotics"],
+    date: "24-03-2023",
+    acceptedTo: ["Under Review"],
+    paperPage: "https://ac-rad.github.io/clairify",
+    arxiv: "https://arxiv.org/abs/2303.14100",
+    github: "https://github.com/ac-rad/xdl-generation",
+  }
+  ```
